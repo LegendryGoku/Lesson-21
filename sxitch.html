@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Switch Example</title>
+</head>
+<body>
+
+    <h2>Enter Day Number (1-7)</h2>
+    <input type="number" id="dayInput">
+    <button onclick="checkDay()">Check Day</button>
+
+    <p id="result"></p>
+
+    <script>
+        function checkDay() {
+            let day = parseInt(document.getElementById("dayInput").value);
+            let output;
+
+            switch(day) {
+                case 1:
+                    output = "Monday";
+                    break;
+                case 2:
+                    output = "Tuesday";
+                    break;
+                case 3:
+                    output = "Wednesday";
+                    break;
+                case 4:
+                    output = "Thursday";
+                    break;
+                case 5:
+                    output = "Friday";
+                    break;
+                case 6:
+                    output = "Saturday";
+                    break;
+                case 7:
+                    output = "Sunday";
+                    break;
+                default:
+                    output = "Invalid Input";
+            }
+
+            document.getElementById("result").innerHTML = output;
+        }
+    </script>
+
+</body>
+</html>
