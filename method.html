@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>String Toolkit</title>
+
+    <style>
+        /* Styling for the whole page */
+        body {
+            font-family: Arial;          /* Sets font style */
+            text-align: center;          /* Centers everything */
+            background: #f4f4f4;         /* Light grey background */
+            padding: 20px;               /* Space around content */
+        }
+
+        /* Styling for input box */
+        input {
+            padding: 10px;               /* Space inside input */
+            width: 300px;               /* Width of input box */
+            margin: 10px;               /* Space outside */
+        }
+
+        /* Styling for buttons */
+        button {
+            padding: 10px 15px;         /* Button size */
+            margin: 5px;                /* Space between buttons */
+            cursor: pointer;            /* Cursor becomes pointer on hover */
+        }
+
+        /* Styling for output text */
+        #output {
+            margin-top: 20px;           /* Space above output */
+            font-weight: bold;          /* Bold text */
+            color: #333;                /* Dark grey color */
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Heading -->
+    <h1>String Toolkit</h1>
+
+    <!-- Input box for user text -->
+    <input type="text" id="textInput" placeholder="Enter your text here">
+
+    <br>
+
+    <!-- Buttons that call different JavaScript functions -->
+    <button onclick="toUpper()">Uppercase</button>
+    <button onclick="toLower()">Lowercase</button>
+    <button onclick="checkStart()">Starts with 'Java'?</button>
+    <button onclick="checkInclude()">Includes 'Script'?</button>
+    <button onclick="replaceWord()">Replace 'Fun'</button>
+    <button onclick="showLength()">Length</button>
+
+    <!-- Area where output will be displayed -->
+    <div id="output"></div>
+
+    <script>
+        // Function to get text from input box
+        function getText() {
+            return document.getElementById("textInput").value;
+        }
+
+        // Function to display result in output div
+        function display(result) {
+            document.getElementById("output").innerText = result;
+        }
+
+        // Converts text to UPPERCASE
+        function toUpper() {
+            let text = getText();             // Get input
+            display(text.toUpperCase());     // Convert and display
+        }
+
+        // Converts text to lowercase
+        function toLower() {
+            let text = getText();
+            display(text.toLowerCase());
+        }
+
+        // Checks if text starts with "Java"
+        function checkStart() {
+            let text = getText();
+            display(text.startsWith("Java"));  // Returns true/false
+        }
+
+        // Checks if text includes "Script"
+        function checkInclude() {
+            let text = getText();
+            display(text.includes("Script")); // Returns true/false
+        }
+
+        // Replaces the word "Fun" with "Awesome"
+        function replaceWord() {
+            let text = getText();
+            display(text.replace("Fun", "Awesome"));
+        }
+
+        // Shows the length of the text
+        function showLength() {
+            let text = getText();
+            display("Length: " + text.length);
+        }
+    </script>
+
+</body>
+</html>
