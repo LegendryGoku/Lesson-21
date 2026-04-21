@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Pattern Generator</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background: #f0f0f0;
+            padding: 20px;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        button {
+            padding: 10px 20px;
+            margin: 10px;
+            cursor: pointer;
+            border: none;
+            background: #333;
+            color: white;
+            border-radius: 5px;
+        }
+
+        button:hover {
+            background: #555;
+        }
+
+        #output {
+            margin-top: 20px;
+            font-size: 20px;
+            white-space: pre; /* IMPORTANT for pattern formatting */
+        }
+    </style>
+</head>
+
+<body>
+
+<h1>✨ Pattern Generator</h1>
+
+<button onclick="linePattern()">Line</button>
+
+
+<p id="output"></p>
+
+<script>
+
+// 1. Line Pattern
+function linePattern() {
+    let pattern = "";
+    for (let i = 1; i <= 5; i++) {
+        pattern += "*";
+    }
+    document.getElementById("output").innerText = pattern;
+}
+</script>
+
+</body>
+</html>
